@@ -18,3 +18,16 @@ var countdownfunction = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+function openNav() {
+}
+
+$(document).ready(function () {
+    $('.bottomleft').on("click", function() {
+        document.getElementById("overlay").style.height = "100%";
+    });
+    $('#overlay').on("click", function() {
+        document.getElementById("overlay").style.height = "0%";
+    });
+});
