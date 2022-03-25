@@ -75,6 +75,7 @@ body, html {
     color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 25px;
+    overflow: hidden;
 }
   
 .topleft {
@@ -322,6 +323,11 @@ hr {
         flex-flow: column;
         justify-content: unset;
         overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #overlay .wrap {
+        padding: 0 5px;
     }
 
     #overlay p {
