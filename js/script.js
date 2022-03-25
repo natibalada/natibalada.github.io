@@ -20,9 +20,7 @@ var countdownfunction = setInterval(function() {
 }, 1000);
 
 
-function openNav() {
-}
-
+// When page loads
 $(document).ready(function () {
     $('.bottomleft').on("click", function() {
         document.getElementById("overlay").style.height = "100%";
