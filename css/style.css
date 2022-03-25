@@ -66,10 +66,10 @@ abbr:hover::after, abbr:active::after {
     60% {transform: translateY(-15px);}
 }
 @keyframes textswing {
-    20% {transform: rotate(15deg);}
-    40% {transform: rotate(-10deg);}
-    60% {transform: rotate(5deg);}
-    80% {transform: rotate(-5deg);}
+    20% {transform: rotate(7deg);}
+    40% {transform: rotate(-5deg);}
+    60% {transform: rotate(3deg);}
+    80% {transform: rotate(-3deg);}
     100% {transform: rotate(0deg);}
 }
 
@@ -104,11 +104,12 @@ body, html {
     cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
     padding: 1em;
     font-size: 22px;
 
+    transition: all 0.2s ease-in;
     animation: 2.5s both infinite textbounce;
     -o-animation: 2.5s both infinite textbounce;
     -moz-animation: 2.5s both infinite textbounce;
@@ -116,7 +117,8 @@ body, html {
 }
 .bottomleft:hover, .bottomleft:active {
     animation-name: textswing;
-    margin-bottom: 20px;
+    transition: all 0.2s ease-in;
+    background-color: #ffffff38;
 }
   
 .middle {
@@ -142,7 +144,6 @@ hr {
     0% {top:-110px; transform: rotate(0deg) rotateY(-90deg);opacity:1;}
     100% {top:400px; transform: rotate(360deg) rotateY(180deg);opacity:0.5;}
 }
-  
 @keyframes downTwo {
     0% {top:-130px; transform: rotate(0deg) rotateY(90deg);opacity:1;}
     100% {top:400px; transform: rotate(-360deg) rotateY(-180deg);opacity:0.5;}
@@ -162,7 +163,7 @@ hr {
     z-index: 5;
     top: 0;
     left: 0;
-    transition: 0.5s;
+    transition: all 0.5s;
 
     scrollbar-color: var(--accent) transparent;
     scrollbar-width: thin;
@@ -182,7 +183,7 @@ hr {
 
 #overlay p {
     text-align: center;
-    text-shadow: 2px 2px 2px #00000085;
+    text-shadow: 2px 2px 2px #00000038;
     font-size: 17pt;
     word-wrap: break-word;
     padding: 15px;
@@ -305,6 +306,8 @@ hr {
     display: flex;
     justify-content: center;
     margin: 75px;
+
+    transition: all 0.15 ease-in-out;
     animation: 3s both infinite bounce;
     -o-animation: 3s both infinite bounce;
     -moz-animation: 3s both infinite bounce;
