@@ -22,10 +22,13 @@ var countdownfunction = setInterval(function() {
 
 // When page loads
 $(document).ready(function () {
-    $('.bottomleft').on("click", function() {
-        document.getElementById("overlay").style.height = "100%";
-    });
-    $('#overlay').on("click", function() {
-        document.getElementById("overlay").style.height = "0%";
-    });
+  const origTitle = document.title;
+  $('.bottomleft').on("click", function() {
+    document.getElementById("overlay").style.height = "100%";
+    document.title = "Felicidades!";
+  });
+  $('#overlay').on("click", function() {
+    document.getElementById("overlay").style.height = "0%";
+    document.title = origTitle;
+  });
 });
