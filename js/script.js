@@ -1,4 +1,4 @@
-var countDownDate = new Date("May 01, 2022 00:00:00").getTime();
+var countDownDate = new Date("June 27, 2022 00:00:00").getTime();
           
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {
@@ -22,13 +22,5 @@ var countdownfunction = setInterval(function() {
 
 // When page loads
 $(document).ready(function () {
-  const origTitle = document.title;
-  $('.bottomleft').on("click", function() {
-    document.getElementById("overlay").style.height = "100%";
-    document.title = "Felicidades!";
-  });
-  $('#overlay').on("click", function() {
-    document.getElementById("overlay").style.height = "0%";
-    document.title = origTitle;
-  });
+  
 });
