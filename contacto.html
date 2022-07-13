@@ -42,15 +42,15 @@
     <div id="container">
         <header>
             <nav>
-                <a href="" id="logo">
+                <a href="index.html" id="logo">
                     <img src='img\logos\logo.png' alt="Logo"/>
                 </a>
                 <div class="nav-container">
-                    <a href="" id="homeBtn" class="center">
+                    <a href="index.html" id="homeBtn" class="center">
                         <div class="nav-img fa fa-house"></div>
                         <div class="nav-text">Inicio</div>
                     </a>
-                    <a href="contacto.html" id="contactBtn" class="center">
+                    <a href="" id="contactBtn" class="center">
                         <div class="nav-img fa fa-envelope"></div>
                         <div class="nav-text">Contacto</div>
                     </a>
@@ -72,44 +72,39 @@
         </header>
         <main>
             <section id="content">
-                <article class="carousel"> <!-- Slideshow -->
-                    <div class="carousel-inner" id="carousel-inner">
-                        <h3>Productos Destacados</h2>
-                    </div>
-                    <div class="carousel-control left">
-                        <div class="arrow left"></div>
-                    </div>
-                    <div class="carousel-control right">
-                        <div class="arrow right"></div>
-                    </div>
-                    <ol class="carousel-indicators" id="carousel-indicators">
-                    </ol>
-                </article>
-                <article class="listing center">
-                    <h2>Joyería</h2>
-                    <div id="filters">
-                        <label>Categoria:</label>
-                        <select id='combocategorias'>
-                            <option selected value='0'>Todas</option>
-                            @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-                        <br>
-                        <label>Productos a mostrar</label>
-                        <select id='numproducts'>
-                            <option selected>10</option>
-                            <option>20</option>
-                            <option>35</option>
-                            <option>50</option>
-                        </select>
-                    </div>
-                    <div id="item-list">
+                <article id="contact">
+                    <div class="contacto">
+                        <h2>CONTACTO</h2>
+                        <p>Los campos marcados con * son obligatorios.</p><br>
+                        <form id="formulario">
+                            <label for="name"><b>Nombre: *</b></label><br>
+                            <input type="text" name="name" id="name" value='' required><br>
+            
+                            <label for="email"><b>Email: *</b></label><br>
+                            <input type="email" name="email" id="email" value='' required><br>
+            
+                            <label for="telephone"><b>Teléfono:</b></label><br>
+                            <input type="tel" name="telephone" id="telephone"><br>
+            
+                            <label for="country"><b>Country</b></label><br>
+                            <select id="country" name="country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select><br><br>
+            
+                            <label for="message"><b>Mensaje: *</b></label><br>
+                            <textarea id="message" name="message" placeholder="Introduzca aquí su mensaje" style="height:200px"></textarea><br><br>
+            
+                            <span id='messages'></span><br>
+            
+                            <input type="button" class="sendBtn" name="sendBtn" id="sendBtn" value="Enviar"><br><br>
+                        </form>
+                        <hr>
                     </div>
                 </article>
                 <!-- Scripts -->
-                <script type="text/javascript" src='js\productsget.js'></script>
-                <script type="text/javascript" src='js\index.js'></script>
+                <script type="text/javascript" src='js/contact.js'></script>
             </section>
             <aside>
                 <div id="side-container">

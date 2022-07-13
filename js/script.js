@@ -1,26 +1,49 @@
-var countDownDate = new Date("June 27, 2022 00:00:00").getTime();
-          
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-
 // When page loads
-$(document).ready(function () {
-  
+$(document).ready(function () 
+{
+  // Navbar menu
+  var open = false;
+  var lastMenuElement;
+
+  function openMenu(currentMenuElement)
+  {
+    // Hide all menu tabs
+    var x = document.getElementById("side-container").querySelectorAll("article");
+    for (var i = 0; i < x.length; i++)
+    {
+      x[i].style.display = "none";
+    }
+
+    if (!open)
+    {
+      document.querySelector("aside").classList.add('open');
+      open = true;
+    }
+    else if (lastMenuElement == currentMenuElement)
+    {
+      document.querySelector("aside").classList.remove('open');
+      open = false;
+    }
+  }
+
+  // Login menu
+  document.getElementById('loginBtn').onclick = function()
+  {
+    openMenu(this.id);
+    document.querySelector(".login").style.display = "initial";
+    lastMenuElement = this.id;
+  };
+
+  // Cart menu
+  $("#cartBtn").click(function(){
+    openMenu(this.id);
+    document.querySelector(".cart").style.display = "initial";
+    lastMenuElement = this.id;
+  });
+
+  // Click on body to close side menu
+  $("#content").click(function(){
+    if (lastMenuElement && open)
+      openMenu(lastMenuElement);
+  });
 });
