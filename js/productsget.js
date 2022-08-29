@@ -51,15 +51,19 @@ function getProducts(p = 1)
         else
         {
             // Get the pages to show
-            var numProducts = data.numProducts ?? 10;
-            var page = data.page ?? 1;
+            var numProducts = datos.numProducts ?? 10;
+            var page = datos.page ?? 1;
             var row_from = (page - 1) * numProducts;
 
             // Get ALL products
             //var products = resultat::orderBy('date', 'DESC')->offset($row_from)->limit($numProducts)->get();
             var totalProducts = resultat.length ?? 0;
+            console.log(resultat.sort(function(a, b) {
+                
+                return b.date > a.date;
+            }));
 
-            
+
 
             /*var itemList = document.querySelector('#item-list');
             itemList.innerHTML = "";

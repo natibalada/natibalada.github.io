@@ -22,7 +22,7 @@
     {
         "name": "product1",
         "desc": "Hello there",
-        "date": "2022-01-08",
+        "date": "01-08-2022",
         "quanity": 3,
         "price": 12.54,
         "highlighted": true,
