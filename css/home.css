@@ -1,3 +1,9 @@
+  /* Animations */
+  @keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
   /* Main section */
   section {
     flex-grow: 1;
@@ -15,5 +21,55 @@
 
   /* Welcome section */
   #welcome {
-    
+    background-color: #fff5ee;
+    color: #8b4513;
+    font-family: 'Dancing Script';
+    line-height: 1.5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #welcome .content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fade-in 1.5s ease-out forwards;
+  }
+  #welcome img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: opacity(70%);
+  }
+  #welcome .text {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #welcome {
+      padding: 2rem 4rem;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+    }
+    #welcome .content {
+      max-width: none;
+      flex-direction: row;
+      align-items: center;
+    }
+    #welcome img {
+      max-width: 30%;
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+    #welcome .text {
+      font-size: 1.5rem;
+      text-align: left;
+    }
   }
