@@ -7,14 +7,14 @@
         "price": 12.99,
         "highlighted": true,
         "images": [
-        "p0_1",
-        "p0_2"
+            "p0_1",
+            "p0_2"
         ],
         "categories": [
-        "rojo",
-        "elegante",
-        "geometrico",
-        "diseño"
+            "rojo",
+            "elegante",
+            "geometrico",
+            "diseño"
         ],
         "type": "pendientes",
         "discount": 15
@@ -27,13 +27,30 @@
         "price": 12.54,
         "highlighted": true,
         "images": [
-        "product1_1",
-        "product1_2",
-        "product1_3"
+            "product1_1",
+            "product1_2",
+            "product1_3"
         ],
         "categories": [
-        "rosa",
-        "elegante"
+            "rosa",
+            "elegante"
+        ],
+        "type": "collar",
+        "discount": 0
+    },
+    {
+        "name": "product3",
+        "desc": "Another test product",
+        "date": "09-12-2023",
+        "quanity": 1,
+        "price": 10,
+        "highlighted": true,
+        "images": [
+            "1656012580819"
+        ],
+        "categories": [
+            "rosa",
+            "elegante"
         ],
         "type": "collar",
         "discount": 0
