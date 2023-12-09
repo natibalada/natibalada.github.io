@@ -5,6 +5,8 @@ https://github.dev/natibalada/natibalada.github.io/tree/files
 - Añadir nuevo "objeto" en "products.json"
 - Añandir imagenes con el nombre correcto en formato .jpeg en la carpeta de "products"
 
+![1](1.png)
+
 # Para eliminar productos:
 - Eliminar objeto de "products.json"
 - Eliminar imagenes del producto
